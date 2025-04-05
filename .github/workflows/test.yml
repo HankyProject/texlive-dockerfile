@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  # push:
+  #     branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo ${github_username}
+
